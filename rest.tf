@@ -10,7 +10,7 @@ resource "aws_security_group" "open_to_internet" {
 resource "aws_security_group_rule" "open_ingress" {
   type        = "ingress"
   from_port   = 0
-  to_port     = 65535
+  to_port     = 0
   protocol    = "tcp"
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = aws_security_group.open_to_internet.id
